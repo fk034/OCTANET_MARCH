@@ -1,0 +1,156 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    -webkit-text-stroke: 2px indianred;
+    text-shadow: 5px 10px 5px black;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: url('pexels-chan-walrus-941869.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+}
+
+.logo {
+    font-size: 3em;
+    letter-spacing: 3px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    position: relative;
+    font-weight: bold;
+}
+
+.menu a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-bottom: 2px solid red;
+    transition: 0.4s linear;
+
+}
+
+.menu a:hover:before {
+    width: 90%;
+}
+
+.login a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    background: indianred;
+    border-radius: 8px;
+    transition: 0.4s;
+}
+
+.login a:hover {
+    background: transparent;
+    border: 1px solid indianred;
+}
+
+.booking {
+    max-width: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.booking span {
+    letter-spacing: 5px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    text-shadow: 2px 2px 0px black;
+}
+
+h1 {
+    font-size: 3.5em;
+    color: white;
+    -webkit-text-stroke-color: rgb(77, 27, 6);
+    -webkit-text-stroke-width: 1px;
+    text-shadow: 5px 2px 10px black;
+}
+
+.booking a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: indianred;
+    border-radius: 8px;
+    letter-spacing: 3px;
+    transition: 0.4s;
+    box-shadow: 5px 10px 10px black;
+}
+
+.booking a:hover {
+    background: yellow;
+    border: 1px solid indianred;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+@media only screen and (max-width : 770px) {
+    .logo {
+        width: 100%;
+        text-align: center;
+        font-size: 2.5em;
+    }
+
+    .login {
+        display: none;
+    }
+
+    nav {
+        padding: 0 20px;
+    }
+
+    .menu {
+        width: 100%;
+        text-align: center;
+    }
+
+    .booking {
+        text-align: center;
+        padding: 20px 60px;
+        flex-direction: column-reverse;
+    }
+
+    .booking a:hover {
+        text-align: center;
+        padding: 0 20px;
+        font-size: 20px;
+    }
+
+
+}
